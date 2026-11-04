@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#FFFFFF"
+    android:padding="12dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Smart Bank System"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:paddingBottom="12dp" />
+
+        <!-- Active Account Details -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Active Account:"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="#000000" />
+
+        <Spinner
+            android:id="@+id/spinnerAccounts"
+            android:layout_width="match_parent"
+            android:layout_height="44dp" />
+
+        <TextView
+            android:id="@+id/textViewAccountDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Account Details..."
+            android:textSize="13sp"
+            android:textColor="#000000"
+            android:padding="6dp"
+            android:background="#EEEEEE"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/buttonToggleBlock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Toggle Account Block Status"
+            android:textSize="12sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Operations -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Operations:"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="#000000" />
+
+        <EditText
+            android:id="@+id/editTextAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter amount"
+            android:inputType="numberDecimal"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/editTextTargetAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Target Account (for transfer)"
+            android:inputType="text"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/buttonDeposit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Deposit"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/buttonWithdraw"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Withdraw"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/buttonTransfer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Transfer"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- History Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Transaction History &amp; Index View:"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="#000000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editTextTransactionIndex"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Index"
+                android:inputType="number"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/buttonViewTransaction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View Index"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textViewTransactionResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Transaction by Index Result"
+            android:textSize="13sp"
+            android:textColor="#000000"
+            android:background="#EFEFEF"
+            android:padding="6dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/textViewHistoryList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No transactions"
+            android:textSize="13sp"
+            android:textColor="#000000"
+            android:background="#F9F9F9"
+            android:padding="6dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Create Account Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create New Account:"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="#000000" />
+
+        <EditText
+            android:id="@+id/editTextNewAccountNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="New Account Number"
+            android:inputType="text"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/editTextNewOwnerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Owner Name"
+            android:inputType="textPersonName"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/editTextNewInitialBalance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Initial Balance"
+            android:inputType="numberDecimal"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/buttonCreateAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create Account"
+            android:textSize="12sp"
+            android:layout_marginTop="4dp" />
+
+    </LinearLayout>
+</ScrollView>
